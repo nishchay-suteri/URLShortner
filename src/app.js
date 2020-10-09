@@ -7,6 +7,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({optionsSuccessStatus: 200}));
+app.use(express.json());
 app.use('/api/shorturl', urlShortnerRouter);
 
 app.get('/',(req,res)=>{
